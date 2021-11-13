@@ -16,10 +16,9 @@ int min(int a,int b){
 }
 
 void get_variables(){
-    int num = 0;
-    for(int i = 0; i<=10; i++){
-        for(int j = 0; j<=10; j++){
-            mat[i][j] = scanf("%d",&num);
+    for(int i = 0; i<N; i++){
+        for(int j = 0; j<N; j++){
+            scanf("%d",&mat[i][j]);
         }
     }
 }
@@ -31,13 +30,27 @@ int route_exists(int start, int end){
 void shortest_route(int start, int end){
    int k,i,j;
     //if(route_exists(i,j)==1) {  //hence true
-    for(k = 1; k<=N; k++){
-        for(i = start; i<=N; i++){
-            for(j = end; j<=N; j++){
-                mat[i][j] = min(mat[i][j],mat[i][k]+mat[k][j]);
-                printf("%d", mat[i][j]);
+    for(k = 0; k < N; k++){
+        for(i = 0; i < N; i++){
+            for(j = 0; j < N; j++){
+                /*
+                if(mat[i][k]!=0&&mat[k][j]!=0&&mat[j][k]!=0&&mat[k][i]!=0){
+                    mat[i][j] = min(mat[i][j],mat[i][k]+mat[k][j]);
+                    mat[j][i] = min(mat[j][i], mat[k][i]+mat[j][k]);
+                 }
+                 */
+                 if(mat[i][k]+mat[k][j]<mat[i][j]&&mat[i][j]!=0){
+                    mat[i][j] = mat[i][k]+mat[k][j];
+                 }
+                 
+                 if(mat[k][i]+mat[j][k]<mat[j][i]&&mat[j][i]!=0){
+                    mat[j][i] = mat[k][i]+mat[j][k];
+                 }
+                 
             }
         }
     }
+     printf("%d", mat[start][end]);
+     //printf("%d", mat[end][start]);
     
 }
