@@ -36,3 +36,7 @@ in the command line type "./connections" and the program will start running.
 >insert two numbers representing the required path u want to check.
 >
 #### Typing 'D' in the command line - will stop the program.
+
+## External info:
+- More about floyd-warshall algorithm : https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm
+- A video represnting how the algorithm works: https://www.youtube.com/watch?v=oNI0rf2P9gE&ab_channel=AbdulBari
