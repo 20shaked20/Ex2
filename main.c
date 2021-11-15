@@ -5,34 +5,40 @@
 #include <stdio.h>
 #include "my_mat.h"
 
-int main(){
+int main()
+{
 
     char x;
     int i = 0;
     int j = 0;
-    
-    while(x!='D'){
+    int exists = 0;
+    while (x != 'D')
+    {
         scanf("%c", &x); //insert a wanted function to implement.
-        if(x == 'A'){ //generate a matrix.
-            printf("Loading variables to matrix...\n");
+        if (x == 'A')
+        { //generate a matrix.
             get_variables();
-            printf("\n");
         }
-         if(x == 'B'){ // finds if there's a route between i,j
-            printf("Locates if there's a route... \n");
-            scanf("%d",&i);
-            scanf("%d",&j);
-            printf("\n");
+        if (x == 'B')
+        { // finds if there's a route between i,j
+            scanf("%d", &i);
+            scanf("%d", &j);
+            exists = route_exists(i, j); // checks if there's a route.
+            if (exists == 1)
+            {
+                printf("True \n");
+            }
+            else
+            {
+                printf("False \n");
+            }
         }
-         if(x == 'C'){ // finds the closest route between i,j
-            scanf("%d",&i);
-            scanf("%d",&j);
-            printf("Locates the shortest route... \n");
-            shortest_route(i,j);
+        if (x == 'C')
+        { // finds the closest route between i,j
+            scanf("%d", &i);
+            scanf("%d", &j);
+            shortest_route(i, j);
             printf("\n");
-        }
-        if(x == 'D'){
-            printf("Exiting program...\n");
         }
     }
 }

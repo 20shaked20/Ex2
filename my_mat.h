@@ -4,30 +4,31 @@
 #ifndef EX_2_MY_MAT_H
 #define EX_2_MY_MAT_H
 
-    extern int mat[10][10]; //defining the mat im going to use.
+extern int mat[10][10]; //defining the mat im going to use.
+                        //extern int mat_copy[10][10]; < dont need r.n
 
-    /* Starting this function is implemented by enterting string - 'A'
+/* Starting this function is implemented by enterting string - 'A'
      * getting the variables & inits the matrix NxN, in our case the matrix is 10x10.
      */
-    void get_variables();
+void get_variables();
 
-    /* Starting this function is implemented by enterting string - 'B'
+/* Starting this function is implemented by enterting string - 'B'
      *getting two integer variables - i,j
      * i - starting location of route
      * j - ending location of route
      * the function will print True if a route exists and False if not.
      */
-    int route_exists(int i, int j);
+int route_exists(int i, int j);
 
-    /* Starting this function is implemented by enterting string - 'C'
+/* Starting this function is implemented by enterting string - 'C'
      *getting two integer variables - i,j
      * i - starting location of route
      * j - ending location of route
      * the function will print the shortest route. (already checked if route exists..)
      */
-    void shortest_route(int i, int j);
+void shortest_route(int i, int j);
 
-    /*
+/*
      * Ending this program is implemented by enterting string - 'D'
      */
 
