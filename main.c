@@ -26,11 +26,11 @@ int main()
             exists = route_exists(i, j); // checks if there's a route.
             if (exists == 1)
             {
-                printf("True \n");
+                printf("True\n");
             }
             else
             {
-                printf("False \n");
+                printf("False\n");
             }
         }
         if (x == 'C')
