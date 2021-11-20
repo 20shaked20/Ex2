@@ -6,7 +6,7 @@ OBJECTS_Main = main.o
 FLAGS= -Wall -g
 
 #Make commands as a bunch:
-all: libmy_mat.so connections 
+all: connections 
 
 
 connections: $(OBJECTS_Main) libmy_mata.a

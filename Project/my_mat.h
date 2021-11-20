@@ -5,7 +5,6 @@
 #define EX_2_MY_MAT_H
 
 extern int mat[10][10]; //defining the mat im going to use.
-                        //extern int mat_copy[10][10]; < dont need r.n
 
 /* Starting this function is implemented by enterting string - 'A'
      * getting the variables & inits the matrix NxN, in our case the matrix is 10x10.
