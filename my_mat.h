@@ -27,6 +27,9 @@ int route_exists(int i, int j);
      */
 void shortest_route(int i, int j);
 
+/* This is an implemetion of flyod_algo to suit our Assignemnet:
+*/
+void floyd_algo()
 /*
      * Ending this program is implemented by enterting string - 'D'
      */
